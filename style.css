@@ -74,8 +74,8 @@ input{
     }
 
     button {
-        width: 100%; 
-        margin: 5px 0;
+        padding: 10px 20px;
+        margin: 10px;
     }
 
     input {
@@ -107,8 +107,9 @@ input{
     }
 
     button {
-        padding: 0.8rem 1.5rem; 
-        font-size: 0.9rem; 
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 0.7rem; 
     }
 
     .score {
