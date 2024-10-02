@@ -4,16 +4,16 @@ class Player {
         this.score = 0;
     }
 
+    getName() {
+        return this.name;
+    }
+
     increaseScore() {
         this.score++;
     }
 
     getScore() {
         return this.score;
-    }
-
-    getName() {
-        return this.name;
     }
 
     resetScore() {
@@ -54,9 +54,16 @@ class Match {
 
     announceWinner() {
         if (this.player1.getScore() > this.player2.getScore()) {
-            alert(`${this.player1.getName()} wins the match!`);
+            // alert(`${this.player1.getName()} wins the match!`);
+            document.querySelector("h1").innerText = `${player1Name} wins!`;
+            this.player1.resetScore();
+            this.player2.resetScore();
+
         } else {
-            alert(`${this.player2.getName()} wins the match!`);
+            // alert(`${this.player2.getName()} wins the match!`);
+            document.querySelector("h1").innerText = `${player2Name} wins!`;
+            this.player1.resetScore();
+            this.player2.resetScore();
         }
     }
 
@@ -71,17 +78,22 @@ class Match {
 let player1Name = '';
 let player2Name = '';
 
-document.getElementById('player1Name').addEventListener('input', function() {
+document.getElementById('player1Name').addEventListener('input', function () {
     player1Name = this.value;
     document.getElementById('player1DisplayName').innerText = player1Name || 'Player 1';
 });
 
-document.getElementById('player2Name').addEventListener('input', function() {
+document.getElementById('player2Name').addEventListener('input', function () {
     player2Name = this.value;
     document.getElementById('player2DisplayName').innerText = player2Name || 'Player 2';
 });
 
-let match = new Match(new Player('Player 1'), new Player('Player 2'));
+let player1 = new Player('Player 1');
+
+let player2 = new Player('Player 2');
+
+let match = new Match(player1, player2);
+
 
 document.getElementById('reset').addEventListener('click', () => {
     match.resetMatch();
