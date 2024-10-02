@@ -63,7 +63,6 @@ class Match {
                 document.querySelector("h1").innerText = "Badminton Score Tracker";
                 document.querySelector("h1").style.color = '#EEEEEE';
             }, 3000);
-
         } else {
             // alert(`${this.player2.getName()} wins the match!`);
             document.querySelector("h1").innerText = `${player2Name} wins!`;
