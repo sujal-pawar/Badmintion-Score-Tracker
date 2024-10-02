@@ -11,7 +11,8 @@ h1 {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 2.3rem;
-    font-style: normal;    
+    font-style: normal;
+    float: center;    
 }
 .container {
     display: inline-block;
@@ -79,6 +80,8 @@ input{
     }
 
     input {
+        padding: 0.3rem;
+        margin-top: 0.5rem;
         width: 100%; 
     }
 
@@ -94,9 +97,10 @@ input{
 
     input{
         margin-top: 0.5rem;
+        width: 100%; 
         border-radius: 1rem;
         border: 1.5px solid black;
-        padding: 0.1rem;
+        padding: 0.3rem;
     }
 
     h1 {
