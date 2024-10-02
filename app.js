@@ -59,6 +59,10 @@ class Match {
             document.querySelector("h1").style.color = 'green';
             this.player1.resetScore();
             this.player2.resetScore();
+            setTimeout(() => {
+                document.querySelector("h1").innerText = "Badminton Score Tracker";
+                document.querySelector("h1").style.color = '#EEEEEE';
+            }, 3000);
 
         } else {
             // alert(`${this.player2.getName()} wins the match!`);
@@ -66,6 +70,10 @@ class Match {
             document.querySelector("h1").style.color = 'green';
             this.player1.resetScore();
             this.player2.resetScore();
+            setTimeout(() => {
+                document.querySelector("h1").innerText = "Badminton Score Tracker";
+                document.querySelector("h1").style.color = '#EEEEEE';
+            }, 3000);
         }
     }
 
@@ -73,6 +81,8 @@ class Match {
         this.player1.resetScore();
         this.player2.resetScore();
         this.displayScore();
+        document.querySelector("h1").innerText = "Badminton Score Tracker";
+        document.querySelector("h1").style.color = '#EEEEEE';
     }
 }
 
