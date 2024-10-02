@@ -56,14 +56,14 @@ class Match {
         if (this.player1.getScore() > this.player2.getScore()) {
             // alert(`${this.player1.getName()} wins the match!`);
             document.querySelector("h1").innerText = `${player1Name} wins!`;
-            document.querySelector("h1").style.color = '#FF2E63';
+            document.querySelector("h1").style.color = 'green';
             this.player1.resetScore();
             this.player2.resetScore();
 
         } else {
             // alert(`${this.player2.getName()} wins the match!`);
             document.querySelector("h1").innerText = `${player2Name} wins!`;
-            document.querySelector("h1").style.color = '#FF2E63';
+            document.querySelector("h1").style.color = 'green';
             this.player1.resetScore();
             this.player2.resetScore();
         }
